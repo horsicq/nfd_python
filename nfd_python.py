@@ -33,8 +33,9 @@ b_sFileName=sFileName.encode('utf-8')
 
 hHandle=(ctypes.c_int)(NFD_CreateScanHandle())
 sResult=NFD_ScanFileA(hHandle,b_sFileName,nFlags)
-NFD_CloseScanHandle(hHandle)
 
 print (sResult.decode("utf-8"))
+
+NFD_CloseScanHandle(hHandle)
 
 
